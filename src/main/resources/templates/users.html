@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Shoes Shop</title>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" type="text/css"/>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="m-2">
+        <h2>Shoes Shop</h2>
+        <a class="h3" th:href="@{/users/new}" style="color: chocolate; text-decoration: none;">Add New Shoes</a>
+    </div>
+
+    <div class="alert-success text-center" th:if="${message}"></div>
+
+    <div>
+        <table class="table table-bordered">
+            <thead class="thead-dark">
+            <tr>
+                <th>ID</th>
+
+                <th>Product Name</th>
+
+                <th>Prices</th>
+
+                <th>Descriptions</th>
+
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <th:block th:each="user: ${listUsers}">
+                <tr>
+                    <td>[[${user.id}]]</td>
+
+                    <td>[[${user.ShoesName}]]</td>
+
+                    <td>[[${user.ShoesPrices}]]</td>
+
+                    <td>[[${user.ShoesDescriptions}]]</td>
+
+                    <td>
+                        <a class="h4 mr-3" th:href="@{'/users/edit/'+ ${user.id}}">Edit</a>
+                        <a class="h4" th:href="@{'/users/delete/'+ ${user.id}}">Delete</a>
+                    </td>
+                </tr>
+            </th:block>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
