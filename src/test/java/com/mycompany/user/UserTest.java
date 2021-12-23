@@ -23,4 +23,20 @@ class UserTest {
     @Test
     void testToString() {
     }
+
+    @Test
+    void testGetId() {
+    }
+
+    @Test
+    void testSetId() {
+    }
+
+    @Test
+    void getShoesName() {
+    }
+
+    @Test
+    void setShoesName() {
+    }
 }
