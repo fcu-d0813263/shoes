@@ -11,10 +11,13 @@ import java.util.Optional;
 public class UserService {
     @Autowired
     private UserRepository repo;
+    private MemberRepository r;
 
     public List<User> listAll() {
         return (List<User>) repo.findAll();
     }
+
+    public List<Member> memberAll(){ return (List<Member>) r.findAll(); }
 
     public void save(User user) {
         repo.save(user);
