@@ -5,19 +5,49 @@
     <title>Shoes Shop</title>
     <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" type="text/css"/>
 </head>
+
+<script>
+    function myFunction() {
+        // Declare variables
+        var input, filter, table, tr, td, i, td1, td2, td3;
+
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        // Loop through all table rows, and hide those who don't match the search query
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0]; // for column one
+            td1 = tr[i].getElementsByTagName("td")[1]; // for column two
+            td2 = tr[i].getElementsByTagName("td")[2]; // for column two
+            td3 = tr[i].getElementsByTagName("td")[3]; // for column two
+            /* ADD columns here that you want you to filter to be used on */
+            if (td) {
+                if ( (td.innerHTML.toUpperCase().indexOf(filter) > -1) || (td1.innerHTML.toUpperCase().indexOf(filter) > -1)  || (td2.innerHTML.toUpperCase().indexOf(filter) > -1) || (td3.innerHTML.toUpperCase().indexOf(filter) > -1))  {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+
+    }
+</script>
+
 <body>
 <div class="container-fluid">
     <div class="m-2">
         <h2 style="float: left; width: 400px;">Shoes Shop</h2>
-        <a th:href="@{/login.html}">logout</a>
+        <a th:href="@{/login}">logout</a>
         <a th:href="@{/users/member}">member</a>
         <a class="h3" th:href="@{/users/new}" style="color: chocolate; text-decoration: none; float: right;">Add New Shoes</a>
-        <input type="text" th:placeholder="Search" style="width: 500px; margin-top: 5px; border-radius: 10px; border-color: black;">
+        <input type="text" th:placeholder="Search" style="width: 500px; margin-top: 5px; border-radius: 10px; border-color: black;" id="myInput">
     </div>
 
 
     <div>
-        <table class="table table-bordered">
+        <table class="table table-bordered" id="myTable">
             <thead class="thead-dark">
             <tr>
                 <th>ID</th>
