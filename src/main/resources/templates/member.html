@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>member</title>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" type="text/css"/>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="m-2">
+        <h2 style="float: left; width: 400px;">Shoes Shop</h2>
+        <a class="h3" th:href="@{/users/new}" style="color: chocolate; text-decoration: none; float: right;">Add New Shoes</a>
+        <input type="text" th:placeholder="Search" style="width: 500px; margin-top: 5px; border-radius: 10px; border-color: black;">
+    </div>
+
+
+    <div>
+        <table class="table table-bordered">
+            <thead class="thead-dark">
+            <tr>
+                <th>ID</th>
+
+                <th>Name</th>
+
+                <th>Email</th>
+
+                <th>Phone</th>
+
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <th:block th:each="user: ${memberall}">
+                <tr>
+                    <td>[[${member.id}]]</td>
+
+                    <td>[[${member.Name}]]</td>
+
+                    <td>[[${member.Email}]]</td>
+
+                    <td>[[${member.Phone}]]</td>
+
+                </tr>
+            </th:block>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
