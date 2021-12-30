@@ -8,20 +8,20 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class UserService {
+public class MemberService {
     @Autowired
-    private UserRepository repo;
+    private MemberRepository repo;
 
-    public List<User> listAll() {
-        return (List<User>) repo.findAll();
+    public List<Member> memberAll(){
+        return (List<Member>) repo.findAll();
     }
 
-    public void save(User user) {
-        repo.save(user);
+    public void save(Member member) {
+        repo.save(member);
     }
 
-    public User get(Integer id) throws UserNotFoundException {
-        Optional<User> result = repo.findById(id);
+    public Member get(Integer id) throws UserNotFoundException {
+        Optional<Member> result = repo.findById(id);
         if (result.isPresent()) {
             return result.get();
         }

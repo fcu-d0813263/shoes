@@ -14,7 +14,7 @@ public class Member {
     private String Name;
 
     @Column(nullable = false, name = "email")
-    private Integer Email;
+    private String Email;
 
     @Column(length = 45, nullable = false, name = "phone")
     private String Phone;
@@ -35,11 +35,11 @@ public class Member {
         Name = name;
     }
 
-    public Integer getEmail() {
+    public String getEmail() {
         return Email;
     }
 
-    public void setEmail(Integer email) {
+    public void setEmail(String email) {
         Email = email;
     }
 

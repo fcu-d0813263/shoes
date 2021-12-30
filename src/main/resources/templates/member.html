@@ -8,8 +8,8 @@
 <body>
 <div class="container-fluid">
     <div class="m-2">
-        <h2 style="float: left; width: 400px;">Shoes Shop</h2>
-        <a class="h3" th:href="@{/users/new}" style="color: chocolate; text-decoration: none; float: right;">Add New Shoes</a>
+        <h2 style="float: left; width: 400px;">Member</h2>
+        <a class="h3" th:href="@{/users/new}" style="color: chocolate; text-decoration: none; float: right;">Add New Member</a>
         <input type="text" th:placeholder="Search" style="width: 500px; margin-top: 5px; border-radius: 10px; border-color: black;">
     </div>
 
@@ -30,7 +30,9 @@
             </tr>
             </thead>
             <tbody>
-            <th:block th:each="user: ${memberall}">
+
+            <th:block th:each="member: ${listMember}">
+
                 <tr>
                     <td>[[${member.id}]]</td>
 

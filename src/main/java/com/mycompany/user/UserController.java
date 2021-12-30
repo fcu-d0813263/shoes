@@ -24,13 +24,13 @@ public class UserController {
         return "users";
     }
 
-    @GetMapping("/users/member")
-    public String showMember(Model model) {
-        List<Member> memberall = service.memberAll();
-        //model.addAttribute("user", new Member());
-        model.addAttribute("memberall", "memberall");
-        return "member";
-    }
+//    @GetMapping("/users/member")
+//    public String showMember(Model model) {
+//        List<Member> memberall = service.memberAll();
+//        //model.addAttribute("user", new Member());
+//        model.addAttribute("memberall", "memberall");
+//        return "member";
+//    }
 
     @GetMapping("/users/new")
     public String showNewFrom(Model model) {
