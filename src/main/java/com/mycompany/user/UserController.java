@@ -24,21 +24,19 @@ public class UserController {
         return "users";
     }
 
-
-
-    @GetMapping("/users/new")
-    public String showNewFrom(Model model) {
-        model.addAttribute("user", new User());
-        model.addAttribute("pageTitle", "Add New User");
-        return "user_from";
-    }
-
     @GetMapping("/users/member")
     public String showMember(Model model) {
         List<Member> memberall = service.memberAll();
         //model.addAttribute("user", new Member());
         model.addAttribute("memberall", "memberall");
         return "member";
+    }
+
+    @GetMapping("/users/new")
+    public String showNewFrom(Model model) {
+        model.addAttribute("user", new User());
+        model.addAttribute("pageTitle", "Add New User");
+        return "user_from";
     }
 
     @PostMapping("/users/save")
