@@ -17,13 +17,19 @@ public class MemberController {
     @Autowired
     private MemberService service;
 
-    @GetMapping("/member")
+    @GetMapping("/users/member")
     public String showMemberList(Model model) {
         List<Member> listMember = service.memberAll();
         model.addAttribute("listMember", listMember);
         return "member";
     }
 
+    @GetMapping("/login")
+    public String login(Model model) {
+        List<Member> listMember = service.memberAll();
+        model.addAttribute("listMember", listMember);
+        return "login";
+    }
 
 //    @GetMapping("/users/new")
 //    public String showNewFrom(Model model) {
