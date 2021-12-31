@@ -57,7 +57,7 @@ public class UserController {
             model.addAttribute("user", user);
             model.addAttribute("pageTitle", "Edit User (ID: " + id + ")");
 
-            return "member";
+            return "user_from";
         } catch (UserNotFoundException e) {
             ra.addFlashAttribute("message", e.getMessage());
             return "redirect:/users";

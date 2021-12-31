@@ -6,6 +6,42 @@
     <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" type="text/css"/>
 </head>
 
+<style>
+    body {
+        background-color: white;
+    }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        border: 1px solid #e7e7e7;
+        background-color: #f3f3f3;
+    }
+
+    li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: #666;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    li a:hover:not(.active) {
+        color: #666;
+        background-color: #ddd;
+    }
+
+    li a.active {
+        color: white;
+        background-color: #444444;
+    }
+</style>
+
 <script>
     function myFunction() {
         // Declare variables
@@ -36,17 +72,24 @@
 </script>
 
 <body>
-<div class="container-fluid">
-    <div class="m-2">
-        <h2 style="float: left; width: 400px;">Shoes Shop</h2>
-        <a th:href="@{/login}">logout</a>
-        <a th:href="@{/users/member}">member</a>
-        <a class="h3" th:href="@{/users/new}" style="color: chocolate; text-decoration: none; float: right;">Add New Shoes</a>
-        <input type="text" th:placeholder="Search" style="width: 500px; margin-top: 5px; border-radius: 10px; border-color: black;" id="myInput" onkeyup="myFunction()">
-    </div>
+<div>
+    <ul>
+        <li><a class="active" href="#home">Shoes Shop</a></li>
+        <li><a th:href="@{/users/member}">Member</a></li>
+        <li><a th:href="@{/users/new}">Add New Shoes</a></li>
+        <li><input type="text" th:placeholder="Search" style="margin-left: 100px; margin-top: 10px; border-radius: 10px; width: 350px;" id="myInput" onkeyup="myFunction()"></li>
+        <li><a th:href="@{/login}" style="margin-left: 350px; ">Logout</a></li>
+    </ul>
+<!--    <div class="m-2">-->
+<!--        <h2 style="float: left; width: 400px;">Shoes Shop</h2>-->
+<!--        <a th:href="@{/login}">logout</a>-->
+<!--        <a th:href="@{/users/member}">member</a>-->
+<!--        <a class="h3" th:href="@{/users/new}" style="color: chocolate; text-decoration: none; float: right;">Add New Shoes</a>-->
+<!--        <input type="text" th:placeholder="Search" style="width: 500px; margin-top: 5px; border-radius: 10px; border-color: black;" id="myInput" onkeyup="myFunction()">-->
+<!--    </div>-->
 
-
-    <div>
+    <br>
+    <div class="container-fluid" >
         <table class="table table-bordered" id="myTable">
             <thead class="thead-dark">
             <tr>
@@ -67,6 +110,7 @@
                     <td>[[${user.id}]]</td>
 
                     <td>[[${user.ShoesName}]]</td>
+
                     <td>[[${user.ShoesPrices}]]</td>
 
                     <td>[[${user.ShoesDescriptions}]]</td>
