@@ -1,6 +1,22 @@
 <div class="wrapper">
   <meta charset="UTF-8">
-  <form class="login">
+
+
+  <form class = "login" th:action="@{/login}" th:object="${loginForm}" method="post">
+    <p class="title">店員登入</p>
+    <label for ="username">Username</label>
+    <input type="text" id="username" name="username" autofocus="autofocus"/>
+
+    <label for ="password">Password</label>
+    <input type="password" id="password" name="password"/>
+    <br/>
+    <button>
+      <i class="spinner"></i>
+      <span class="state">登入</span>
+    </button>
+
+    <p th:if="${invalidCredentials}" class="error">Username or Password is wrong</p>
+    <!--
     <p class="title">店員登入</p>
     <input type="text" placeholder="Username" autofocus/>
     <i class="fa fa-user"></i>
@@ -10,7 +26,10 @@
       <i class="spinner"></i>
       <span class="state">登入</span>
     </button>
+    -->
   </form>
+
+
   <style>
     .title {
       color: #444;

@@ -24,12 +24,12 @@ public class MemberController {
         return "member";
     }
 
-    @GetMapping("/login")
+    /*@GetMapping("/login")
     public String login(Model model) {
         List<Member> listMember = service.memberAll();
         model.addAttribute("listMember", listMember);
         return "login";
-    }
+    }*/
 
 //    @GetMapping("/users/new")
 //    public String showNewFrom(Model model) {

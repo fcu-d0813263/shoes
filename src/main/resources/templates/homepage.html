@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!--沒登入時的頁面-->
+<!--沒有編輯data base 的能力-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<title>homepage</title>
+<head>
+    <meta charset="UTF-8">
+    <title>Shoes Shop</title>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" type="text/css"/>
+</head>
+
+<style>
+    body {
+        background-color: white;
+    }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        border: 1px solid #e7e7e7;
+        background-color: #f3f3f3;
+    }
+
+    li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: #666;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    li a:hover:not(.active) {
+        color: #666;
+        background-color: #ddd;
+    }
+
+    li a.active {
+        color: white;
+        background-color: #444444;
+    }
+</style>
+
+<script>
+    function myFunction() {
+        // Declare variables
+        var input, filter, table, tr, td, i, td1, td2, td3;
+
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        // Loop through all table rows, and hide those who don't match the search query
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0]; // for column one
+            td1 = tr[i].getElementsByTagName("td")[1]; // for column two
+            td2 = tr[i].getElementsByTagName("td")[2]; // for column two
+            td3 = tr[i].getElementsByTagName("td")[3]; // for column two
+            /* ADD columns here that you want you to filter to be used on */
+            if (td) {
+                if ( (td.innerHTML.toUpperCase().indexOf(filter) > -1) || (td1.innerHTML.toUpperCase().indexOf(filter) > -1)  || (td2.innerHTML.toUpperCase().indexOf(filter) > -1) || (td3.innerHTML.toUpperCase().indexOf(filter) > -1))  {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+
+    }
+</script>
+
+<body>
+<div>
+    <ul>
+        <li><a class="active" href="#home">Shoes Shop</a></li>
+        <li><a th:href="@{/users/member}">Member</a></li>
+        <!--
+        <li><a th:href="@{/users/new}">Add New Shoes</a></li>
+        -->
+        <li><input type="text" th:placeholder="Search" style="margin-left: 100px; margin-top: 10px; border-radius: 10px; width: 350px;" id="myInput" onkeyup="myFunction()"></li>
+        <li><a th:href="@{/login}" style="margin-left: 350px; ">Logout</a></li>
+    </ul>
+
+    <br>
+    <div class="container-fluid" >
+        <table class="table table-bordered" id="myTable">
+            <thead class="thead-dark">
+            <tr>
+                <th>ID</th>
+
+                <th>Product Name</th>
+
+                <th>Prices</th>
+
+                <th>Descriptions</th>
+
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <th:block th:each="user: ${listUsers}">
+                <tr>
+                    <td>[[${user.id}]]</td>
+
+                    <td>[[${user.ShoesName}]]</td>
+
+                    <td>[[${user.ShoesPrices}]]</td>
+
+                    <td>[[${user.ShoesDescriptions}]]</td>
+                    <!--
+                    <td>
+                        <a class="h4 mr-3" style="margin-left: 20px; margin-right: 20px; text-decoration: none;" th:href="@{'/users/edit/'+ ${user.id}}">Edit</a>
+                        <a class="h4" style="margin-left: 20px; margin-right: 20px; text-decoration: none;" th:href="@{'/users/delete/'+ ${user.id}}">Delete</a>
+                    </td>
+                    -->
+                </tr>
+            </th:block>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
