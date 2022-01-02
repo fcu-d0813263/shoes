@@ -30,6 +30,12 @@ public class UserController {
         model.addAttribute("listUsers", listUsers);
         return "homepage";
     }
+    @GetMapping("/customer")
+    public String showcustomerList(Model model) {
+        List<User> listUsers = service.listAll();
+        model.addAttribute("listUsers", listUsers);
+        return "customer";
+    }
     /*
     @GetMapping("/login")
     public String login(Model model) {
