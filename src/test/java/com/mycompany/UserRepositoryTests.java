@@ -66,4 +66,5 @@ public class UserRepositoryTests {
         Optional<User> optionalUser = repo.findById(userId);
         Assertions.assertThat(optionalUser).isNotPresent();
     }
+
 }
