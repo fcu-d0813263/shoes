@@ -24,6 +24,13 @@ public class UserController {
         return "users";
     }
 
+    @GetMapping("/homepage")
+    public String showProductList(Model model) {
+        List<User> listUsers = service.listAll();
+        model.addAttribute("listUsers", listUsers);
+        return "homepage";
+    }
+
 //    @GetMapping("/users/member")
 //    public String showMember(Model model) {
 //        List<Member> memberall = service.memberAll();
