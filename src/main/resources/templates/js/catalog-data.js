@@ -34,13 +34,13 @@ window.catalog = [{
     title: "A custom “Net” Nike Air Yeezy 2",
     description: '',
     placeholder: 'More colours',
-    discountedPrice: null,
-    price: null,
+    discountedPrice: 150,
+    price: 150,
     hasNew: false,
     category: 'women',
     fashion: 'Casual style',
-    colors: ['Black', 'Blue'],
-    sizes: ['UK 52', 'UK 52', 'UK 52'],
+    colors: ['Orange', 'Green'],
+    sizes: ['UK 51', 'UK 52', 'UK 56'],
     thumbnail: 'images/5.png', // replace with path to image extracted from catalog layout
     preview: ['images/5.png', 'images/5.png', 'images/5.png'] // replace with paths to images extracted from item layout
 }, {
@@ -49,13 +49,13 @@ window.catalog = [{
     title: 'Nike Air Huarache Teal',
     description: '',
     placeholder: null,
-    discountedPrice: 80.6,
-    price: 80.6,
+    discountedPrice: 80,
+    price: 80,
     hasNew: true,
     category: 'women',
     fashion: 'Casual style',
     colors: ['Black', 'Blue'],
-    sizes: ['UK 52', 'UK 52', 'UK 52'],
+    sizes: ['UK 50', 'UK 51', 'UK 52'],
     thumbnail: 'images/6.png', // replace with path to image extracted from catalog layout
     preview: ['images/6.png', 'images/6.png', 'images/6.png'] // replace with paths to images extracted from item layout
 }, {
@@ -79,13 +79,13 @@ window.catalog = [{
     title: 'Nike Air Mag',
     description: '',
     placeholder: null,
-    discountedPrice: 76.25,
-    price: 76.25,
+    discountedPrice: 76,
+    price: 76,
     hasNew: false,
     category: 'women',
     fashion: 'Casual style',
     colors: ['Black', 'Blue'],
-    sizes: ['UK 52', 'UK 52', 'UK 52'],
+    sizes: ['UK 52', 'UK 53', 'UK 54'],
     thumbnail: 'images/8.png', // replace with path to image extracted from catalog layout
     preview: ['images/8.png', 'images/8.png', 'images/8.png'] // replace with paths to images extracted from item layout
 }, {
@@ -94,13 +94,13 @@ window.catalog = [{
     title: 'Travis Scott x Nike Air Force 1.',
     description: '',
     placeholder: null,
-    discountedPrice: 65.5,
-    price: 65.5,
+    discountedPrice: 65,
+    price: 65,
     hasNew: false,
     category: 'women',
     fashion: 'Casual style',
-    colors: ['Black', 'Blue'],
-    sizes: ['UK 52', 'UK 52', 'UK 52'],
+    colors: ['Black', 'Orange'],
+    sizes: ['UK 49', 'UK 50', 'UK 52'],
     thumbnail: 'images/9.png', // replace with path to image extracted from catalog layout
     preview: ['images/9.png', 'images/9.png', 'images/9.png'] // replace with paths to images extracted from item layout
 }, {
@@ -109,13 +109,13 @@ window.catalog = [{
     title: 'Nike Air Max 90 Superfly HTM',
     description: '',
     placeholder: null,
-    discountedPrice: 130.25,
-    price: 130.25,
+    discountedPrice: 130,
+    price: 130,
     hasNew: true,
     category: 'women',
     fashion: 'Casual style',
-    colors: ['Black', 'Blue'],
-    sizes: ['UK 52', 'UK 52', 'UK 52'],
+    colors: ['Black', 'Blue','Red'],
+    sizes: ['UK 44', 'UK 45', 'UK 46', 'UK 48', 'UK 49'],
     thumbnail: 'images/10.png', // replace with path to image extracted from catalog layout
     preview: ['images/10.png', 'images/10.png', 'images/10.png'] // replace with paths to images extracted from item layout
 }, {
@@ -124,13 +124,13 @@ window.catalog = [{
     title: 'Air Jordan 3 “Black Cat” 2017',
     description: '',
     placeholder: null,
-    discountedPrice: 140.5,
-    price: 140.5,
+    discountedPrice: 140,
+    price: 140,
     hasNew: false,
     category: 'women',
     fashion: 'Casual style',
-    colors: ['Black', 'Blue'],
-    sizes: ['UK 52', 'UK 52', 'UK 52'],
+    colors: ['Blue'],
+    sizes: ['UK 50', 'UK 53', 'UK 54'],
     thumbnail: 'images/11.png', // replace with path to image extracted from catalog layout
     preview: ['images/11.png', 'images/11.png', 'images/11.png'] // replace with paths to images extracted from item layout
 }, {
@@ -139,27 +139,27 @@ window.catalog = [{
     title: 'The OG Cortez',
     description: '',
     placeholder: null,
-    discountedPrice: 550.5,
-    price: 550.5,
+    discountedPrice: 550,
+    price: 550,
     hasNew: false,
     category: 'women',
     fashion: 'Casual style',
-    colors: ['Black', 'Blue'],
-    sizes: ['UK 52', 'UK 52', 'UK 52'],
+    colors: ['Red', 'Blue'],
+    sizes: ['UK 50', 'UK 52', 'UK 54'],
     thumbnail: 'images/12.png', // replace with path to image extracted from catalog layout
     preview: ['images/12.png', 'images/12.png', 'images/12.png'] // replace with paths to images extracted from item layout
 }, {
     id: '014c271a-2812-47fc-b63f-ba279a4ec830',
     dateAdded: '2017-05-15T16:58:40.000Z',
     title: 'Air Max 1 OG Red',
-    description: 'Featuring fine Italian wool, this elegant suit has pick-stitch edging, cascade buttons at the cuffs',
+    description: '',
     placeholder: null,
-    discountedPrice: 24.75,
-    price: 24.75,
+    discountedPrice: 240,
+    price: 240,
     hasNew: false,
     category: 'women',
     fashion: 'Casual style',
-    colors: ['Black', 'Blue'],
+    colors: ['Red', 'White'],
     sizes: ['UK 52', 'UK 52', 'UK 52'],
     thumbnail: 'images/1.png', // replace with path to image extracted from catalog layout
     preview: ['images/1.png', 'images/1.png', 'images/1.png'] // replace with paths to images extracted from item layout
@@ -170,7 +170,7 @@ window.catalog = [{
     description: '',
     placeholder: null,
     discountedPrice: 90,
-    price: 120,
+    price: 90,
     hasNew: false,
     category: 'women',
     fashion: 'Casual style',
@@ -214,13 +214,13 @@ window.catalog = [{
     title: 'Air Jordan 3 “Black Cat” 2017',
     description: '',
     placeholder: null,
-    discountedPrice: 140.5,
-    price: 140.5,
+    discountedPrice: 140,
+    price: 140,
     hasNew: false,
     category: 'women',
     fashion: 'Casual style',
-    colors: ['Black', 'Blue'],
-    sizes: ['UK 52', 'UK 52', 'UK 52'],
+    colors: ['Blue'],
+    sizes: ['UK 50', 'UK 53', 'UK 54'],
     thumbnail: 'images/11.png', // replace with path to image extracted from catalog layout
     preview: ['images/11.png', 'images/11.png', 'images/11.png'] // replace with paths to images extracted from item layout
 }];

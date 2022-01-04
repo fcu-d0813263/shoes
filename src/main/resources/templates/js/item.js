@@ -23,7 +23,7 @@ window.addEventListener("DOMContentLoaded", function () {
                          <ul class="item-colors">Color:
                          ${data.colors.map(color => `<li class="item-color">${color}</li>`).join(" ")}
                          </ul>
-                         <button class="toBagBtn">Add to bag</button>
+                         <button class="toBagBtn">Add to Cart</button>
                          </div>`;
         return item;
     };

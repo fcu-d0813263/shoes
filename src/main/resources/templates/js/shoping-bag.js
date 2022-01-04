@@ -37,7 +37,7 @@ function createItem(data) {
 
 if (shopingItemsArray.length === 0) {
     items.innerHTML = `<div class=message>
-                            <span>Your shopping bag is empty. Use Catalog to add new items</span>
+                            <span>Your shopping cart is empty. Use Catalog to add new items</span>
                         </div>`;
 } else {
     for (let i = 0; i < shopingItemsArray.length; i++) {
