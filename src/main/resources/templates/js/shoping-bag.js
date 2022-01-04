@@ -22,7 +22,7 @@ function createItem(data) {
                             <img src="${data.imgSrc}" alt="${data.title}">
                         </div>
                         <div class="bag-item-details">
-                            <h4 class="bag-item-title">Only Skinny Jeans</h4>
+                            <h4 class="bag-item-title">${data.title}</h4>
                                 <span class="bag-item-price">${data.price}</span>
                                 <span class="bag-item-color">Color: ${data.color}</span>
                                 <span class="bag-item-size">Size: ${data.size}</span>

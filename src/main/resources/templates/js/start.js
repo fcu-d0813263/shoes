@@ -32,7 +32,7 @@ window.addEventListener("DOMContentLoaded", function () {
                           <div class="card-img-overlay">
                           <span>View item</span>
                           </div>
-                          <img src="${data.thumbnail}" alt="Only Skinny Jeans">
+                          <img src="${data.thumbnail}" alt="Travis Scott x Nike Air Force 1">
                           </div>
                           <h4 class="card-title">${data.title}</h4>
                           ${data.discountedPrice === null && data.price === null ? '<p class="card-placeholder">'+data.placeholder+'</p>' : data.discountedPrice === data.price ? '<span class="card-price">'+ data.price +'</span>' : '<span class="card-discount-price">'+ data.discountedPrice + ' -' + (100 - data.discountedPrice * 100 / data.price).toFixed() + '%'+'</span>' + '<span class="card-price">'+ data.price +'</span>'}

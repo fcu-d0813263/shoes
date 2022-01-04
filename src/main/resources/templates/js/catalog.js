@@ -33,8 +33,8 @@ window.addEventListener("DOMContentLoaded", function () {
             mobileItem[index].classList.remove("select"); //Елементу мобильного списка убрать класс
         } else {
             parentList.classList.add("select"); // Родительскому li добавить класс "select"
-            value.innerHTML = targetHtml; // Значение фильтра в родительском елементе на InnerHTML елемента по которому был клик 
-            mobileItem[index].innerHTML = targetHtml; // Значение фильтра Елемента мобильного списка  на InnerHTML елемента по которому был клик 
+            value.innerHTML = targetHtml; // Значение фильтра в родительском елементе на InnerHTML елемента по которому был клик
+            mobileItem[index].innerHTML = targetHtml; // Значение фильтра Елемента мобильного списка  на InnerHTML елемента по которому был клик
             mobileItem[index].classList.add("select"); //Елементу мобильного списка добавить класс
             for (let i = 0; i < subListItem.length; i++) {
                 subListItem[i].classList.remove("highlight"); // У всех елементов подменю убрать класс
@@ -56,7 +56,7 @@ window.addEventListener("DOMContentLoaded", function () {
                           </div>
                           <h4 class="catalog-item-title">${data.title}</h4>
                           ${data.discountedPrice === null && data.price === null ? '<p class="catalog-item-placeholder">'+data.placeholder+'</p>' : data.discountedPrice === data.price ? '<span class="catalog-item-price">'+ data.price +'</span>' : '<span class="catalog-item-discount-price">'+ data.discountedPrice + ' -' + (100 - data.discountedPrice * 100 / data.price).toFixed() + '%'+'</span>' + '<span class="catalog-item-price">'+ data.price +'</span>'}
-                          ${data.hasNew ? '<span class="catalog-item-has-new">New</span>' : ''} 
+                          ${data.hasNew ? '<span class="catalog-item-has-new">New</span>' : ''}
                           </div>`;
         return item;
     }
@@ -104,11 +104,7 @@ window.addEventListener("DOMContentLoaded", function () {
     function createPromo() {
         let promo = document.createElement("div");
         promo.className = "catalog-promo";
-        promo.innerHTML = `
-        <h2 class="promo-title">Last weekend <span class="promo-title-red-text">extra 50%</span>
-            off on all reduced boots and shoulder bags</h2>
-        <p class="promo-desc">This offer is valid in-store and online. Prices displayed reflect
-            this additional discount. This offer ends at 11:59 GMT on March 1st 2015</p>`;
+
         return promo;
     }
 
